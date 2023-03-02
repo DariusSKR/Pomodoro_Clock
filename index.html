@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro App</title>
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <audio id="myAudio">
+    <source src="slow-piano-pause-sound-96703.mp3" type="audio/mp3" />
+  </audio>
+
+  <body>
+    <div class="container">
+      <h1>Pomodoro 25+5 Clock</h1>
+
+      <p id="countDown">
+        <span id="minutes">25</span>:<span id="seconds">00</span>
+      </p>
+
+      <div>
+        <p>Session length: <span id="sessionLength"></span></p>
+        <p>Pause length: <span id="pauseLength"></span></p>
+      </div>
+
+      <div class="startStopButtons">
+        <button
+          style="background-color: rgb(129, 215, 0)"
+          id="startButton"
+          onclick="whatIsOn == 'Timer'? myInterval():myBreakInterval()"
+        >
+          Start
+        </button>
+        <button
+          style="background-color: brown"
+          id="pauseButton"
+          onclick="myStop()"
+        >
+          Pause
+        </button>
+      </div>
+
+      <div id="pauseButtons">
+        <button onclick="increaseMinutesTimer()">Timer+</button>
+        <button id="decreaseTimer" onclick="decreaseMinutesTimer()">
+          Timer-
+        </button>
+        <button onclick="increaseMinutesPause()">Pause+</button>
+        <button id="decreasePause" onclick="decreaseMinutesPause()">
+          Pause-
+        </button>
+      </div>
+
+      <button id="resetButton" onclick="reset()">Reset</button>
+
+      <p id="pRoundNumber">
+        Rounds: <rounds:span id="roundNumber"></rounds:span>
+      </p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

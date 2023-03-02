@@ -1,0 +1,90 @@
+@import url('https://fonts.google.com/specimen/Roboto');
+
+* {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+
+body {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 188, 233, 0.413) 100%
+  );
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 200;
+}
+
+#countDown,
+#minutes,
+#seconds {
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.startStopButtons {
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+  padding: 25px;
+}
+
+.startStopButtons > button {
+  border-radius: 15px;
+  padding: 15px;
+}
+
+#pauseButtons {
+  display: flex;
+  justify-content: space-around;
+  width: 600px;
+  margin-bottom: 25px;
+}
+#pauseButtons > button {
+  padding: 15px;
+  border-radius: 999px;
+}
+
+#resetButton {
+  padding: 15px;
+  background-color: cornflowerblue;
+}
+
+#pRoundNumber {
+  font-size: 1.5em;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+  .startStopButtons {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+  #pauseButtons {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+}
