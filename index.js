@@ -93,6 +93,8 @@ const reset = () => {
   timerMinutes = timerLengthMinutes
   timerSeconds = timerLengthSeconds
   countDown.innerText = `${timerMinutes}:${timerSeconds}0`
+  spanSessionLength.innerText = 25
+  spanPauseLength.innerText = 5
   numberOfRounds = []
   spanNumberOfRounds.innerText = numberOfRounds.join(' ')
 }
